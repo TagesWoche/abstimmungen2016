@@ -1,0 +1,13 @@
+@import 'partials/reset'; // reset all tags
+@import 'partials/variables'; // colors, fonts etc...
+@import 'partials/layout'; // layout
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+// bower:scss
+// endbower

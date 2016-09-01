@@ -1,0 +1,10 @@
+{
+  "name": "abstimmungen2016",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "angular-mocks": "^1.4.0"
+  },
+  "appPath": "app",
+  "moduleName": "abstimmungen2016App"
+}
