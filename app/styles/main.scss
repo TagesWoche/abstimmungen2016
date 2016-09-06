@@ -2,6 +2,8 @@
 @import 'partials/variables'; // colors, fonts etc...
 @import 'partials/layout'; // layout
 
+
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -9,5 +11,129 @@
     padding: 0.2em 0;
 }
 
+header {
+    
+    height:60px;
+    background-color:$lightgrey;
+    border-bottom:1px solid $mediumgrey;
+    display:block;
+}
+
+header > div > img {
+    height:40px;
+    float:left;
+    margin:10px 0 0 1%;
+}
+
+
+nav {
+    float:right;
+    margin-top:10px;
+}
+
+nav ul {
+    float:left;
+    margin:15px 50px 0 0;
+}
+
+nav img {
+    float:left;
+    height:40px;
+    margin-right:2px;
+}
+
+nav li {
+    float:right;
+    margin-right:4px;
+}
+
+.container {
+    max-width:$max-width-content;
+    width:100%;
+    margin:0 auto;
+}
+
+.content > article {
+    background:$mediumgrey;
+    
+    height:auto;
+    display:block;
+}
+
+.short {
+    width:48%;
+    float:left;
+    margin:0 1%;
+}
+
+.wide {
+    width:98%;
+    float:left;
+    margin:0 1%;
+}
+
+.short, .wide {
+     @include MQ(M) {
+         float:none;
+         width:98%;
+         margin:0 auto;
+    }
+}
+
+
+
+
+
+// font formats
+
+h1 {
+    font-family: $titel;
+    font-weight: $titel-weight;
+    font-size: $titel-size;
+}
+
+h2 {
+    font-family: $titel;
+    font-weight: $titel-weight;
+    font-size: $laufschrift-size;
+}
+
+p, li, a {
+    font-family: $laufschrift;
+    font-weight: $laufschrift-weight;
+    font-size: $laufschrift-size;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color:$diagramm5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // bower:scss
 // endbower
+
+
+
+
