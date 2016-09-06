@@ -1,7 +1,9 @@
 {
   "name": "abstimmungen2016",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "highcharts": "^4.2.6"
+  },
   "devDependencies": {},
   "appPath": "app",
   "moduleName": "abstimmungen2016App"
