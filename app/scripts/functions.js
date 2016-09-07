@@ -141,12 +141,17 @@ $(function () {
           'stroke-width': 1,
           stroke: 'black',
           r: 3,
+            title: {
+                  style: {
+           color: '#000',
+                  }
+            },
           states: {
             hover: {
-              fill: '#bada55'
+              fill: '#efefef',
             },
             select: {
-              stroke: '#039',
+              stroke: '#efefef',
               fill: '#bada55'
             }
           }

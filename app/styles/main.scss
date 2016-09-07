@@ -56,7 +56,7 @@ nav li {
 }
 
 .content > article {
-    background:$mediumgrey;
+    
     height:auto;
     display:block;
 }
@@ -88,7 +88,7 @@ h1 {
     font-family: $titel;
     font-weight: $titel-weight;
     font-size: $titel-size;
-    margin:10px 0;
+    margin:10px 0 20px 0;
 }
 
 h2 {
@@ -97,6 +97,9 @@ h2 {
     font-size: $laufschrift-size;
     line-height:$line-height;
     margin-bottom:8px;
+    
+    border-bottom: 2px solid #cbcbcb;
+    padding-bottom:4px;
 }
 
 p, li, a {
@@ -115,7 +118,18 @@ a:hover {
     color:$diagramm5;
 }
 
+// Regierungsratswahlen Chart
 
+#highcharts-0 > svg > g.highcharts-axis-labels.highcharts-xaxis-labels > text, #highcharts-0 > svg > g.highcharts-data-labels.highcharts-series-0.highcharts-tracker > g > text {
+    text-decoration: none !important;
+    font-size: 12px !important;
+    font-weight:normal !important;
+}
+
+#highcharts-0 > svg > text {
+    color:white !important;
+    fill:white !important;
+}
 
 // Intro Design
 /*
@@ -126,16 +140,21 @@ a:hover {
     background-position:right 50px !important;
 }*/
 
-
+.intro {
+    position: relative;
+    text-align:center;
+}
 .intro img {
-    float:right;
-    margin-top:100px;
+    position:absolute;
+    right:0;
+    top:0;
+    
     width:222px;
     
 }
 
 .intro p {
-    margin-top:50px;
+    
  
 }
 
@@ -156,7 +175,7 @@ li { padding-left:30px;}
 #tabs > div li:before {content: "• "; color: black; margin-right:7px; margin-left: -18px;}
 #tabs > div a {color:#008148 !important;}
 a:hover {text-decoration: none;}
-.parteilogo {width:170px; margin-left:10px; float:right;}
+.parteilogo {width:170px; margin:0 auto 10px auto;}
 strong {font-weight:bold;}
 .ui-tabs-active {background:$diagramm5 !important; padding-bottom:0 !important;}
 .ui-tabs-panel {height:auto; padding:10px; border:2px solid #e9e9e9;}
