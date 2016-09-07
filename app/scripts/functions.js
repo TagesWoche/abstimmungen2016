@@ -1,3 +1,7 @@
+// function for tabs
+
+$(function(){$("#tabs").tabs({hide:{effect:"fade",duration:300},show:{effect:"fade",duration:300}})});
+
 // function to include html files
 
 w3IncludeHTML();
@@ -128,6 +132,7 @@ $(function () {
     }
   });
 });
+
 
 
 
