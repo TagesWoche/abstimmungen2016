@@ -36,7 +36,7 @@ $(function () {
         borderWidth: 0,
         dataLabels: {
           enabled: true,
-          valueSuffix: ' %'
+          format: '{point.y:.1f}%'
         }
       }
     },
