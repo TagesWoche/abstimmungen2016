@@ -13,12 +13,18 @@ $(function () {
       enabled: false
     },
 
+    lang: {
+        drillUpText: '◁ Zurück zu {series.name}'
+    },
+
     chart: {
-      type: 'bar'
+      type: 'bar',
+      spacingTop: 40,
     },
     title: {
-      text: 'Regierungsratswahlen'
+      text: null
     },
+
     xAxis: {
       type: 'category'
     },
@@ -102,29 +108,84 @@ $(function () {
       ]
     }],
     drilldown: {
+      drillUpButton: {
+        relativeTo: 'spacingBox',
+        position: {
+          y: -30,
+          x: 0
+        },
+        theme: {
+          fill: 'white',
+          'stroke-width': 1,
+          stroke: 'black',
+          r: 3,
+          states: {
+            hover: {
+              fill: '#bada55'
+            },
+            select: {
+              stroke: '#039',
+              fill: '#bada55'
+            }
+          }
+        }
+      },
       series: [{
-        id: 'animals',
+        id: 'herzog',
         data: [
-          ['Cats', 4],
-          ['Dogs', 2],
-          ['Cows', 1],
-          ['Sheep', 2],
-          ['Pigs', 1]
+          ['SP', 96],
+          ['EVP', 84],
+          ['BGB', 83],
+          ['BDP', 71],
+          ['glp', 64],
+          ['CVP', 57],
+          ['LDP', 43],
+          ['FDP', 23],
+          ['SVP', 19]
         ]
       }, {
-        id: 'fruits',
+        id: 'cramer',
         data: [
-          ['Apples', 4],
-          ['Oranges', 2]
+          ['FDP', 99],
+          ['LDP', 98],
+          ['BDP', 97],
+          ['CVP', 93],
+          ['SVP', 82],
+          ['glp', 77],
+          ['EVP', 45],
+          ['SP', 24],
+          ['BGB', 9]
         ]
       }, {
-        id: 'cars',
+        id: 'brutschin',
         data: [
-          ['Toyota', 4],
-          ['Opel', 2],
-          ['Volkswagen', 2]
+          ['SP', 94],
+          ['BGB', 84],
+          ['EVP', 70],
+          ['glp', 63],
+          ['CVP', 40],
+          ['BDP', 39],
+          ['LDP', 35],
+          ['FDP', 20],
+          ['SVP', 11]
         ]
-      }]
+      }, {
+        id: 'engelberger',
+        data: [
+          ['CVP', 100],
+          ['BGB', 84],
+          ['EVP', 70],
+          ['glp', 63],
+          ['CVP', 40],
+          ['BDP', 39],
+          ['LDP', 35],
+          ['FDP', 20],
+          ['SVP', 11]
+        ]
+      }
+
+
+      ]
     }
   });
 });
