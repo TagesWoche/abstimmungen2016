@@ -11,7 +11,10 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    
     <!-- endbuild -->
+    
+
   </head>
   <body>
     <!--[if lte IE 8]>
@@ -38,29 +41,54 @@
     </header>
 
     <section class="container content">
-
-        <article class="short">
-            <h1>Ein Titel</h1>
-            <h2>Ein Untertitel</h2>
-            <p>Fliesstext</p>
+        
+        <!-- Logo, Titel & Einleitung -->
+        <article class="short intro">
+            <h1>Kantonale Wahlen 2016</h1>
+            <img src="images/keyvisual.png">
+            <p>Willkommen zu unserem Begrüssungstext. Dieser Text begrüsst Sie grüssend und wünscht freundliche Grüsse. Willkommen zu unserem Begrüssungstext. Dieser Text begrüsst Sie grüssend und wünscht freundliche Grüsse. Willkommen zu unserem Begrüssungstext. Dieser Text begrüsst Sie grüssend und wünscht freundliche Grüsse.</p>
 
         </article>
-
+        <!-- Regierungsratswahlen -->
         <article class="short" w3-include-html="modules/drilldown.html"></article>
 
+        <!-- Regierungspräsidium -->
         <article class="short"></article>
 
-        <article class="short"></article>
-
+        <!-- Politikerköpfe -->
         <article class="wide"></article>
 
-        <article class="short"></article>
+        <!-- Übersicht der Parteien -->
+        <article class="wide">
+            <h2>Übersicht über alle Parteien</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <div id="tabs"> <ul> <li><a href="#sp">SP</a></li><li><a href="#svp">SVP</a></li><li><a href="#grun">GB</a></li><li><a href="#fdp">FDP</a></li><li><a href="#ldp">LDP</a></li><li><a href="#cvp">CVP</a></li><li><a href="#glp">GLP</a></li></ul> <div id="sp"> <a href="http://www.sp-bs.ch/" target="_blank"><img class="parteilogo" src="/modules/parteien/sp.jpg"></a> <p class="profilbild"><img class="floatleft" src="/modules/parteien/BeatrizGreuter.jpg"><strong>Fraktionspräsidentin</strong><br/>Beatriz Greuter<br/><strong>Fraktionsgrösse</strong><br/>33, davon 16 Frauen<br/></p></div><div id="svp"> <a href="http://www.svp-basel.ch/" target="_blank"><img class="parteilogo" src="/modules/parteien/svp.jpg"></a> <p class="profilbild"><img class="floatleft" src="/modules/parteien/LorenzNaegelin.jpg"><strong>Fraktionspräsident</strong><br/>Lorenz Nägelin<br/><strong>Fraktionsgrösse</strong><br/>14, davon 1 Frau<br/></p></div><div id="grun"> <a href="http://www.grosserrat.bs.ch/de/mitglieder-gremien/fraktionen-und-parteien/gb-gruenes-buendnis" target="_blank"><img class="parteilogo" src="/modules/parteien/gb.jpg"></a> <p class="profilbild"><img class="floatleft" src="/modules/parteien/BrigittaGerber.jpg"><strong>Fraktionspräsidentin</strong><br/>Brigitta Gerber<br/><strong>Fraktionsgrösse</strong><br/>13, davon 6 Frauen<br/></p></div><div id="fdp"> <a href="http://www.fdp-bs.ch/" target="_blank"><img class="parteilogo" src="/modules/parteien/fdp.jpg"></a> <p class="profilbild"><img class="floatleft" src="/modules/parteien/AndreasZappala.jpg"><strong>Fraktionspräsident</strong><br/>Andreas Zappalà<br/><strong>Fraktionsgrösse</strong><br/>13, keine Frau<br/></p></div><div id="ldp"> <a href="http://www.ldp.ch/" target="_blank"><img class="parteilogo" src="/modules/parteien/ldp.jpg"></a> <p class="profilbild"><img class="floatleft" src="/modules/parteien/koechlin.jpg"><strong>Fraktionspräsident</strong><br/>Michael Koechlin<br/><strong>Fraktionsgrösse</strong><br/>10, davon 1 Frau<br/></p></div><div id="cvp"> <a href="http://www.cvp-bs.ch/" target="_blank"><img class="parteilogo" src="/modules/parteien/cvp.jpg"></a> <p class="profilbild"><img class="floatleft" src="/modules/parteien/andreaknellwolf.jpg"><strong>Fraktionspräsidentin</strong><br/>Andrea Knellwolf<br/><strong>Fraktionsgrösse</strong><br/>8, davon 4 Frauen<br/></p></div><div id="glp"> <a href="http://www.bs.grunliberale.ch/" target="_blank"><img class="parteilogo" src="/modules/parteien/glp.jpg"></a> <p class="profilbild"><img class="floatleft" src="/modules/parteien/werthemann.jpg"><strong>Fraktionspräsident</strong><br/>Dieter Werthemann<br/><strong>Fraktionsgrösse</strong><br/>5, davon 2 Frauen<br/></p></div></div>   
+
+
+</article>
+
+        
+        <!-- Sorgenbarometer -->
+        <article class="wide"></article>
+
+        <!-- Smart Vote -->
+        <article class="short">
+            <h2>Kandidaten</h2>
+            <p>Informieren Sie sich gezielt über einzelne Kandidierende und ihre politischen Profile: mit der Suchmaske von Smartvote.</p>
+            <iframe width="100%" height="200px" scrolling="no" src="https://client.smartvote.ch/#/iframes/tageswoche/db/elections/95/candidates"></iframe>
+
+
+        </article>
+        
+        <article class="short">
+            <h2>Wahlempfelung</h2>
+            <p>Welcher Kandidat passt zu Ihnen? Die Wahlempfehlung von smartvote hilft bei Ihrer Wahl.</p>
+            <iframe width="100%" height="200px" scrolling="no" src="https://client.smartvote.ch/#/iframes/tageswoche/recommendation/start"></iframe>
+        </article>
 
         <article class="short"></article>
 
-        <article class="short"></article>
-
-
+    
     </section>
 
     <footer>
@@ -72,9 +100,13 @@
     <script src="bower_components/highcharts/highcharts.js"></script>
     <script src="bower_components/highcharts/highcharts-more.js"></script>
     <script src="bower_components/highcharts/modules/exporting.js"></script>
+    <script src="bower_components/iframe-resizer/js/iframeResizer.js"></script>
+    <script src="bower_components/iframe-resizer/js/iframeResizer.contentWindow.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+    <script>iFrameResize({log:true})</script>
+    
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
