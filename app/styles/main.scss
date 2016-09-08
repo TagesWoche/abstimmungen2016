@@ -5,7 +5,6 @@
 
 
 
-
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -102,7 +101,7 @@ h2 {
     padding-bottom:4px;
 }
 
-p, li, a {
+p, li, a, span {
     font-family: $laufschrift;
     font-weight: $laufschrift-weight;
     font-size: $laufschrift-size;
@@ -159,6 +158,94 @@ a:hover {
 }
 
 
+// Politikerköpfe
+.heads {
+    text-align: center;
+}
+
+.heads h2 {
+    text-align: left;
+}
+
+.heads div {
+    width:17%;
+    height:0;
+    padding-bottom:17%;
+    margin:1%;
+    overflow:hidden;
+    display:inline-block;
+        @include MQ(S) {
+            width:45%;
+            padding-bottom:45%;
+        }
+}
+
+.heads div img {
+    width:100%;
+    filter:grayscale(100%);
+    transition: all 2s ease;
+        @include MQ(S) {
+            filter:grayscale(0%);
+            }
+}
+
+.heads div:hover img {
+    filter:grayscale(30%);
+    
+    
+    
+}
+
+.heads div span {
+    font-size:20px;
+    text-align: center;
+    background-position: right top;
+    background-color:rgba(0,0,0,0.56);
+    color:white;
+    position:relative;
+    top:0;
+    max-width:100%;
+    transition:all 1s ease;
+    display:block;
+    padding:10px 5px 70px 5px;
+        @include MQ(S) {
+            top:-68px;
+            }
+    
+    
+}
+
+.heads div span:before {
+    content:url(../images/headsarrow.png);
+    position: absolute;
+    top: -28px;
+    right: 50%;
+    margin-right:-25px;
+    transition:all 0.5s ease-out;
+        @include MQ(S) {
+            display:none;
+            }
+}
+
+.heads div:hover span:before {
+    opacity:0;
+}
+.heads div:hover span {
+    top:-88px;
+}
+
+.heads small {
+    display:block;
+    font-size:14px;
+    
+}
+
+.heads abbr {
+    
+    @include MQ(S) {
+            display:none;
+            }
+}
 
 
 // Parteien Übersicht
@@ -175,7 +262,7 @@ li { padding-left:30px;}
 #tabs > div li:before {content: "• "; color: black; margin-right:7px; margin-left: -18px;}
 #tabs > div a {color:#008148 !important;}
 a:hover {text-decoration: none;}
-.parteilogo {width:170px; margin:0 auto 10px auto;}
+.parteilogo {width:170px; margin:0 auto 10px auto; float:right;}
 strong {font-weight:bold;}
 .ui-tabs-active {background:$diagramm5 !important; padding-bottom:0 !important;}
 .ui-tabs-panel {height:auto; padding:10px; border:2px solid #e9e9e9;}
