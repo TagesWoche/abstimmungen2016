@@ -157,7 +157,7 @@ $(function () {
         data: [
           ['SP', 96],
           ['EVP', 84],
-          ['BGB', 83],
+          ['GB', 83],
           ['BDP', 71],
           ['glp', 64],
           ['CVP', 57],
@@ -176,7 +176,7 @@ $(function () {
           ['glp', 77],
           ['EVP', 45],
           ['SP', 24],
-          ['BGB', 9]
+          ['GB', 9]
         ]
       }, {
         id: 'brutschin',
@@ -429,7 +429,7 @@ $(function () {
         y: 8
       }, {
         name: 'Andere',
-        y: 30
+        y: 18
       }
       ]
     }]
