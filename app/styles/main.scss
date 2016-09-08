@@ -2,7 +2,7 @@
 @import 'partials/variables'; // colors, fonts etc...
 @import 'partials/layout'; // layout
 @import 'partials/jqueryui'; // jquery ui
-@import 'https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i';
+@import 'https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Montserrat:400,700';
 
 
 
@@ -38,7 +38,11 @@ footer {
 }
 
 footer p {
+    
     margin-top:28px;
+    @include MQ(S) {
+        padding:0 10px;
+    }
 }
 
 
@@ -69,6 +73,10 @@ nav li {
         }
 }
 
+li a:hover {
+    text-decoration:underline !important;
+}
+
 .container {
     max-width:$max-width-content;
     width:100%;
@@ -77,21 +85,20 @@ nav li {
 
 .container .button {
     padding:4px 8px;
-    background: #008148;
-    border-bottom:3px solid #007743;
+    
     border-radius: 2px;
     margin:20px 4px;
-    color:#fff;
+    color:#008148;
     display:inline-block;
     font-weight:normal;
     font-size:18px;
     transition:all 0s ease;
-    float:right;
+    float:left;
 }
 
 .container .button:hover {
-    background: #009050;
-    text-decoration: none !important;
+    text-decoration:underline !important;
+    
     
     
 }
@@ -156,11 +163,13 @@ h1 {
 h2 {
     font-family: $titel;
     font-weight: $titel-weight;
-    font-size: $laufschrift-size;
+    font-size: 22px;
+    color:#000;
+    
     line-height:$line-height;
     margin-bottom:8px;
     
-    border-bottom: 2px solid #cbcbcb;
+    border-bottom: 2px solid #D9D9D9;
     padding-bottom:4px;
 }
 
@@ -172,6 +181,11 @@ p, li, a, span {
     margin-bottom:5px;
 }
 
+article > p {
+    @include MQ(S) {
+        padding:0 10px;
+    }
+}
 a {
     text-decoration: none;
     color:$diagramm4;
@@ -182,9 +196,13 @@ a:hover {
     text-decoration:underline !important;
 }
 
+#sorg h2 {
+    margin-bottom:25px;
+}
+
 // Regierungsratswahlen Chart
 
-#highcharts-0 > svg > g.highcharts-axis-labels.highcharts-xaxis-labels > text, #highcharts-0 > svg > g.highcharts-data-labels.highcharts-series-0.highcharts-tracker > g > text {
+#highcharts-0 > svg > g.highcharts-axis-labels.highcharts-xaxis-labels > text, #highcharts-0 > svg > g.highcharts-data-labels.highcharts-series-0.highcharts-tracker > g > text, #highcharts-6 > svg > g.highcharts-axis-labels.highcharts-xaxis-labels > text {
     text-decoration: none !important;
     font-size: 12px !important;
     font-weight:normal !important;
@@ -211,7 +229,7 @@ a:hover {
     bottom:0;
     right:10%;
     width:222px;
-     @include MQ(M) {
+     @include MQ(L) {
             display:none;
             }
 }
@@ -226,6 +244,7 @@ a:hover {
 // Politikerköpfe
 .heads {
     text-align: center;
+    margin-top:0px !important;
 }
 
 .heads a:hover {
@@ -330,7 +349,7 @@ p, li, a {font-size: 16px; font-family: $laufschrift;  line-height:24px;}
 li { padding-left:30px;}
 #tabs > div li:before {content: "• "; color: black; margin-right:7px; margin-left: -18px;}
 #tabs > div a {color:#008148 !important;}
-a:hover {text-decoration: none;}
+a:hover {text-decoration: none !important;}
 .parteilogo {width:170px; margin:0 auto 10px auto; float:right;}
 strong {font-weight:bold;}
 .ui-tabs-active {background:$diagramm5 !important; padding-bottom:0 !important;}
@@ -341,7 +360,7 @@ strong {font-weight:bold;}
 .clear {clear:both;}
 .hoffnung strong {margin-top:10px;}
     @media only screen and (max-width : 468px) {
-        .parteilogo {float:none; margin:0 auto 20px auto; display:table; }
+        .parteilogo {float:none; margin:0 auto 20px auto; display:none; }
         /* fix for multi column tab list */
         #tabs li {border-radius: 3px !important;}
         .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 0; margin: 4px .2em 0 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
@@ -385,6 +404,24 @@ label[for="mobilenav"] {
          @include MQ(S) {
             height:250px;
     }
+}
+
+
+// more to read
+
+.more li:before, .button:before {
+    content: "" !important;
+    border-color: transparent #008148;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 1em;
+    position: relative;
+    pointer-events: none;
+    margin-left: 0 !important;
 }
 
 /* responsive menu slicknav
