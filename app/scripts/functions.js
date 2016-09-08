@@ -63,6 +63,10 @@ $(function () {
       }
     },
 
+    credits: {
+      enabled: false
+    },
+
     yAxis: {
       labels: {
         formatter: function() {
@@ -293,6 +297,82 @@ $(function () {
     }
   });
 });
+
+
+// parlament chart
+
+$(function () {
+  $('#parlament_chart').highcharts({
+    exporting: {
+      enabled: false
+    },
+
+    chart: {
+      type: 'bar'
+    },
+    title: {
+      text: null
+    },
+    xAxis: {
+      categories: ['SP', 'SVP', 'LDP', 'FDP', 'BGB', 'CVP', 'glp', 'BDP', 'EVP', 'VA', 'EDU', 'Andere' ],
+      title: {
+        text: null
+      }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Wähleranteile der Parteien'
+      },
+      labels: {
+        overflow: 'justify',
+        formatter: function() {
+          return this.value+"%";
+        }
+      }
+    },
+    tooltip: {
+        enabled: false
+    },
+    plotOptions: {
+      bar: {
+        pointPadding: 0,
+        borderWidth: 0,
+        groupPadding: 0.1,
+        dataLabels: {
+          enabled: true,
+          format: '{point.y:.1f}%'
+        }
+      }
+    },
+    legend: {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -40,
+      y: 80,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+      shadow: true
+    },
+    credits: {
+      enabled: false
+    },
+    series: [{
+      name: 'Umfrage 2016',
+      data: [30.25, 16.85, 12.81, 11.53, 10.34, 6.9, 3.84, 1.18, 3.94, 0.59, 0.49, 1.28]
+    }, {
+      name: 'Wahlen 2012',
+      data: [30.7, 15, 9.6, 11.1, 11.8, 7.3, 5, 1.1, 4.2, 1.2, 0.4, 2.5]
+    }, {
+      name: 'Wahlen 2008',
+      data: [29.7, 13.7, 8.4, 9.9, 13.8, 9.3, 5.1, 0, 4.4, 0, 0, 0]
+    }]
+  });
+});
+
+
 
 
 
