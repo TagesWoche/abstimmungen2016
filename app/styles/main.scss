@@ -55,7 +55,7 @@ nav li {
 }
 
 .content > article {
-    
+
     height:auto;
     display:block;
 }
@@ -96,7 +96,7 @@ h2 {
     font-size: $laufschrift-size;
     line-height:$line-height;
     margin-bottom:8px;
-    
+
     border-bottom: 2px solid #cbcbcb;
     padding-bottom:4px;
 }
@@ -144,14 +144,14 @@ a:hover {
     position:absolute;
     right:0;
     top:0;
-    
+
     width:222px;
-    
+
 }
 
 .intro p {
-    
- 
+
+
 }
 
 
@@ -188,9 +188,9 @@ a:hover {
 
 .heads div:hover img {
     filter:grayscale(30%);
-    
-    
-    
+
+
+
 }
 
 .heads div span {
@@ -208,8 +208,8 @@ a:hover {
         @include MQ(S) {
             top:-68px;
             }
-    
-    
+
+
 }
 
 .heads div span:before {
@@ -234,11 +234,11 @@ a:hover {
 .heads small {
     display:block;
     font-size:14px;
-    
+
 }
 
 .heads abbr {
-    
+
     @include MQ(S) {
             display:none;
             }
@@ -275,11 +275,6 @@ strong {font-weight:bold;}
         .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 0; margin: 4px .2em 0 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
         .ui-tabs .ui-tabs-nav li.ui-tabs-active { margin-bottom: -1px; padding-bottom: 1px !important; }
 }
-
-
-
-
-
 
 
 
