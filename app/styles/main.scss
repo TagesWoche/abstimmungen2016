@@ -54,6 +54,47 @@ nav li {
     margin:0 auto;
 }
 
+.container .button {
+    padding:4px 8px;
+    background: #008148;
+    border-bottom:3px solid #007743;
+    border-radius: 2px;
+    margin:20px 4px;
+    color:#fff;
+    display:inline-block;
+    font-weight:normal;
+    font-size:18px;
+    transition:all 0s ease;
+    float:right;
+}
+
+.container .button:hover {
+    background: #009050;
+    
+    
+}
+/*
+.container .button {
+    padding:4px 8px;
+    background: #008148;
+    border:3px solid #008148;
+    border-radius: 0;
+    margin:20px 4px;
+    color:#fff;
+    display:inline-block;
+    font-weight:normal;
+    font-size:18px;
+    transition:all 0s ease;
+    float:right;
+}
+
+.container .button:hover {
+    background: #fff;
+    color:#008148;
+    border-color: #008148;
+}
+*/
+
 .content > article {
     
     height:auto;
@@ -69,7 +110,7 @@ nav li {
 .wide {
     width:98%;
     float:left;
-    margin:5px 1%;
+    margin:25px 1%;
 }
 
 .short, .wide {
@@ -139,18 +180,20 @@ a:hover {
 .intro {
     position: relative;
     text-align:center;
+    margin-bottom:0 !important;
 }
-.intro img {
-    position:absolute;
-    right:0;
-    top:0;
-    
+.keyvisual {
+    position:fixed;
+    bottom:0;
+    right:10%;
     width:222px;
-    
+     @include MQ(M) {
+            display:none;
+            }
 }
 
 .intro p {
-    
+    margin-bottom:0;
  
 }
 
@@ -252,7 +295,7 @@ h3 { font-size: 25px; font-family: 'GeorgiaProW01-SemiBold', Georgia, 'Times New
 #tabs > ul > li:hover {cursor: pointer; background:$diagramm3;}
 #tabs > ul > li > a:focus {outline:0;}
 #tabs > ul > li > a {color:white;}
-h4 { font-size: 20px; font-family: 'GeorgiaProW01-SemiBold', Georgia, 'Times New Roman', Times, serif; font-weight:bold; margin:0 0 24px 0;}
+h4 { font-size: 16px; font-family: 'GeorgiaProW01-SemiBold', Georgia, 'Times New Roman', Times, serif; font-weight:bold; margin:0 0 24px 0;}
 p, ul { margin:0 0 24px 0; }
 p, li, a {font-size: 16px; font-family: 'GeorgiaProW01-Regular', Georgia, 'Times New Roman', Times, serif;  line-height:24px;}
 li { padding-left:30px;}
