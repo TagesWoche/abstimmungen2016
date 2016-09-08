@@ -2,6 +2,7 @@
 @import 'partials/variables'; // colors, fonts etc...
 @import 'partials/layout'; // layout
 @import 'partials/jqueryui'; // jquery ui
+@import 'https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i';
 
 
 
@@ -13,11 +14,14 @@
 }
 
 header {
-
-    height:60px;
+    height:61px;
     background-color:$lightgrey;
     border-bottom:1px solid $mediumgrey;
     display:block;
+    transition:all 1s ease;
+    @include MQ(M){
+            overflow:hidden;
+        }
 }
 
 header > div > img {
@@ -26,10 +30,24 @@ header > div > img {
     margin:10px 0 0 1%;
 }
 
+footer {
+    height:160px;
+    background-color:$lightgrey;
+    border-top:1px solid $mediumgrey;
+    display:block;
+}
+
+footer p {
+    margin-top:28px;
+}
+
 
 nav {
     float:right;
-    margin-top:10px;
+    margin-top:5px;
+     @include MQ(M){
+            width:100%;
+        }
 }
 
 nav ul {
@@ -46,6 +64,9 @@ nav img {
 nav li {
     float:right;
     margin-right:4px;
+    @include MQ(M){
+            float:none;
+        }
 }
 
 .container {
@@ -70,6 +91,7 @@ nav li {
 
 .container .button:hover {
     background: #009050;
+    text-decoration: none !important;
     
     
 }
@@ -117,7 +139,7 @@ nav li {
      @include MQ(M) {
          float:none;
          width:98%;
-         margin:0 auto;
+         margin:20px auto;
     }
 }
 
@@ -128,7 +150,7 @@ h1 {
     font-family: $titel;
     font-weight: $titel-weight;
     font-size: $titel-size;
-    margin:10px 0 20px 0;
+    margin:0 0 20px 0;
 }
 
 h2 {
@@ -152,10 +174,12 @@ p, li, a, span {
 
 a {
     text-decoration: none;
+    color:$diagramm4;
 }
 
 a:hover {
-    color:$diagramm5;
+    color:$diagramm4;
+    text-decoration:underline !important;
 }
 
 // Regierungsratswahlen Chart
@@ -194,13 +218,18 @@ a:hover {
 
 .intro p {
     margin-bottom:0;
- 
+    
+    
 }
 
 
 // Politikerköpfe
 .heads {
     text-align: center;
+}
+
+.heads a:hover {
+    text-decoration: none !important;
 }
 
 .heads h2 {
@@ -290,14 +319,14 @@ a:hover {
 
 // Parteien Übersicht
 
-h3 { font-size: 25px; font-family: 'GeorgiaProW01-SemiBold', Georgia, 'Times New Roman', Times, serif;  padding:10px 10px 10px 46px; font-weight:bold;}
+h3 { font-size: 25px; font-family: $laufschrift;  padding:10px 10px 10px 46px; font-weight:bold;}
 #tabs > ul > li {background:$diagramm4; border:none;}
 #tabs > ul > li:hover {cursor: pointer; background:$diagramm3;}
 #tabs > ul > li > a:focus {outline:0;}
 #tabs > ul > li > a {color:white;}
-h4 { font-size: 16px; font-family: 'GeorgiaProW01-SemiBold', Georgia, 'Times New Roman', Times, serif; font-weight:bold; margin:0 0 24px 0;}
+h4 { font-size: 16px; font-family: $laufschrift; font-weight:bold; margin:0 0 24px 0;}
 p, ul { margin:0 0 24px 0; }
-p, li, a {font-size: 16px; font-family: 'GeorgiaProW01-Regular', Georgia, 'Times New Roman', Times, serif;  line-height:24px;}
+p, li, a {font-size: 16px; font-family: $laufschrift;  line-height:24px;}
 li { padding-left:30px;}
 #tabs > div li:before {content: "• "; color: black; margin-right:7px; margin-left: -18px;}
 #tabs > div a {color:#008148 !important;}
@@ -319,15 +348,78 @@ strong {font-weight:bold;}
         .ui-tabs .ui-tabs-nav li.ui-tabs-active { margin-bottom: -1px; padding-bottom: 1px !important; }
 }
 
+// mobile navigation settings
+
+.mobilenav {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+label[for="mobilenav"] {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background:url("../images/menuopen.svg") no-repeat;
+    transition:all 0.7s ease-in-out;
+        @include MQ(M) {
+            display:inline-block;
+         }
+        @include MQ(S) {
+            margin-top: 4px;
+        }
+}
 
 
+.mobilenav:checked ~ label {
+    background:url("../images/menuclose.svg");
+}
+.mobilenav:checked ~ header {
+        @include MQ(M) {
+            height: 250px;
+    }
+         @include MQ(S) {
+            height:250px;
+    }
+}
+
+/* responsive menu slicknav
+
+.slicknav_menu {
+    display:none;
+    
+    background:url("../images/tawo-logo.png") no-repeat $lightgrey;
+    border-bottom:1px solid $mediumgrey;
+    background-size:101px 40px;
+    background-position:1% 10px;
+        @include MQ(M){
+            display:block;
+        }
+}
+
+.slicknav_menutxt {
+    display:none !important;
+}
+
+.slicknav_icon {
+    margin:0 !important;
+}
+
+.slicknav_btn {
+    background:none !important;
+}
+
+.slicknav_icon-bar {
+    box-shadow:0 !important;
+    background:$darkgrey !important;
+}
 
 
-
-
-
-
-
+*/
 
 
 // bower:scss
