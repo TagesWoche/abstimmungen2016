@@ -2,10 +2,6 @@
 
 $(function(){$("#tabs").tabs({hide:{effect:"fade",duration:300},show:{effect:"fade",duration:300}})});
 
-// function to include html files
-
-w3IncludeHTML();
-
 
 // drilldown
 
@@ -23,14 +19,14 @@ $(function () {
 
     chart: {
       type: 'bar',
-      spacingTop: 40,
+      spacingTop: 0,
       events: {
         drilldown: function (e) {
           this.setTitle({text: e.point.name});
           this.yAxis[0].axisTitle.attr({
             text: 'Stimmenanteile der Regierungskandidaten nach Partei' });
         },
-        drillup: function(e) {
+        drillup: function() {
           this.setTitle({ text: '' });
           this.yAxis[0].axisTitle.attr({
             text: 'Stimmenanteil am Total aller gültigen Wahlzettel' });
@@ -137,7 +133,7 @@ $(function () {
       drillUpButton: {
         relativeTo: 'spacingBox',
         position: {
-          y: -30,
+          y: -5,
           x: 0
         },
         theme: {
@@ -317,13 +313,15 @@ $(function () {
       categories: ['SP', 'SVP', 'LDP', 'FDP', 'BGB', 'CVP', 'glp', 'BDP', 'EVP', 'VA', 'EDU', 'Andere' ],
       title: {
         text: null
-      }
+      },
+      opposite: true
     },
     yAxis: {
       min: 0,
       title: {
         text: 'Wähleranteile der Parteien'
       },
+      reversed: true,
       labels: {
         overflow: 'justify',
         formatter: function() {
@@ -347,9 +345,9 @@ $(function () {
     },
     legend: {
       layout: 'vertical',
-      align: 'right',
+      align: 'left',
       verticalAlign: 'top',
-      x: -40,
+      x: 40,
       y: 80,
       floating: true,
       borderWidth: 1,
@@ -367,7 +365,75 @@ $(function () {
       data: [30.7, 15, 9.6, 11.1, 11.8, 7.3, 5, 1.1, 4.2, 1.2, 0.4, 2.5]
     }, {
       name: 'Wahlen 2008',
-      data: [29.7, 13.7, 8.4, 9.9, 13.8, 9.3, 5.1, 0, 4.4, 0, 0, 0]
+      data: [29.7, 13.7, 8.4, 9.9, 13.8, 9.3, 5.1, 0, 4.4, 0, 2.4, 3.3]
+    }]
+  });
+});
+
+
+//regierungspräsidium chart
+
+$(function () {
+  $('#praesidium').highcharts({
+    exporting: {
+      enabled: false
+    },
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: null
+    },
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: null
+      },
+      labels: {
+        overflow: 'justify',
+        formatter: function () {
+          return this.value + "%";
+        }
+      }
+    },
+    tooltip: {
+      enabled: false
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      column: {
+        pointPadding: 0.1,
+        borderWidth: 0,
+        dataLabels: {
+          enabled: true,
+          format: '{point.y:.1f}%'
+        }
+      }
+    },
+    credits: {
+      enabled: false
+    },
+    series: [{
+      color: '#008148',
+      data: [{
+        name: 'Baschi Dürr',
+        y: 44
+      }, {
+        name: 'Elisabeth Ackermann',
+        y: 30
+      }, {
+        name: 'Martina Bernasconi',
+        y: 8
+      }, {
+        name: 'Andere',
+        y: 30
+      }
+      ]
     }]
   });
 });

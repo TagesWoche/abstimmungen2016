@@ -44,20 +44,29 @@
 
         <!-- Logo, Titel & Einleitung -->
         <article class="wide intro">
-            <h1>Kantonale Wahlen 2016</h1>
+            <h1>Wahlen BS 2016</h1>
             <img src="images/keyvisual.png">
             <p>Willkommen zu unserem Begrüssungstext. Dieser Text begrüsst Sie grüssend und wünscht freundliche Grüsse. Willkommen zu unserem Begrüssungstext. Dieser Text begrüsst Sie grüssend und wünscht freundliche Grüsse. Willkommen zu unserem Begrüssungstext. Dieser Text begrüsst Sie grüssend und wünscht freundliche Grüsse.</p>
 
         </article>
         <!-- die Regierung Einleitung & Präsidium Grafik -->
+      <article class="wide">
+      <h2>Regierung und Präsidium</h2>
+      </article>
+
+
         <article class="short">
-            <h2>die Regierung</h2>
+
             <p>Willkommen zu unserem Begrüssungstext. Dieser Text begrüsst Sie grüssend und wünscht freundliche Grüsse. Willkommen zu unserem Begrüssungstext. Dieser Text begrüsst Sie grüssend und wünscht freundliche Grüsse. Willkommen zu unserem Begrüssungstext. Dieser Text begrüsst Sie grüssend und wünscht freundliche Grüsse.</p>
+            <div id="praesidium" style="width: 80%; height: 250px; text-align: left;"></div>
+
         </article>
 
 
         <!-- Regierungsratswahlen -->
-        <article class="short" w3-include-html="modules/drilldown.html"></article>
+        <article class="short">
+          <div id="container" style="min-width: 310px; height: 500px; margin: 0 auto"></div>
+        </article>
 
         <!-- Köpfe -->
         <article class="wide">
@@ -65,13 +74,18 @@
 
         </article>
 
+      <article class="short">
+        <h2>das Parlament</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+        <div id="parlament_chart" style="min-width: 310px; max-width: 800px; height: 700px; margin: 0 auto"></div>
+      </article>
+
 
 
         <!-- Übersicht der Parteien -->
         <article class="short">
-            <h2>das Parlament</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-             <div id="tabs">
+            <div id="tabs">
 
             <ul>
                 <li><a href="#sp">SP</a></li>
@@ -250,10 +264,7 @@
 
         <!-- Grafik -->
 
-      <article class="short">
-        <div id="parlament_chart" style="min-width: 310px; max-width: 800px; height: 800px; margin: 0 auto"></div>
 
-      </article>
 
         <!-- Sorgenbarometer -->
         <article class="wide">
@@ -295,8 +306,6 @@
     <!-- endbower -->
     <!-- endbuild -->
     <script>iFrameResize({log:true})</script>
-
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/functions.js"></script>

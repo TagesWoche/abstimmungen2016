@@ -56,7 +56,7 @@ nav li {
 }
 
 .content > article {
-    
+
     height:auto;
     display:block;
 }
@@ -97,7 +97,7 @@ h2 {
     font-size: $laufschrift-size;
     line-height:$line-height;
     margin-bottom:8px;
-    
+
     border-bottom: 2px solid #cbcbcb;
     padding-bottom:4px;
 }
@@ -126,11 +126,6 @@ a:hover {
     font-weight:normal !important;
 }
 
-#highcharts-0 > svg > text {
-    color:white !important;
-    fill:white !important;
-}
-
 // Intro Design
 /*
 .intro {
@@ -148,14 +143,14 @@ a:hover {
     position:absolute;
     right:0;
     top:0;
-    
+
     width:222px;
-    
+
 }
 
 .intro p {
-    
- 
+
+
 }
 
 
