@@ -616,3 +616,6 @@ $(function () {
   });
 });
 
+$(function(){
+        $('#menu').slicknav();
+    });

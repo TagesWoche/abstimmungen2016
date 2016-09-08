@@ -13,7 +13,24 @@
     <link rel="stylesheet" href="styles/main.css">
 
     <!-- endbuild -->
-
+    
+    <!-- Facebook -->
+    <meta property="og:url" content="http://www.tageswoche.ch/wahlen2016" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Wahlen in Basel 2016" />
+	<meta property="og:description" content="Alles, was Sie über die Gesamterneuerungswahlen wissen müssen." />
+	<meta property="og:image" content="http://www.tageswoche.ch/cityguide/images/social/fbshare.jpg" />
+   
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://www.tageswoche.ch/wahlen2016">
+    <meta name="twitter:site" content="@tageswoche">
+    <meta name="twitter:title" content="Wahlen in Basel 2016">
+    <meta name="twitter:description" content="Alles, was Sie über die Gesamterneuerungswahlen wissen müssen.">
+    <meta name="twitter:creator" content="@felixmichel">
+    <meta name="twitter:image:src" content="http://www.tageswoche.ch/cityguide/images/social/fbshare.jpg">
+    <meta name="twitter:domain" content="tageswoche.ch">
+    <meta property="twitter:account_id" content="287795165" />
 
   </head>
   <body>
@@ -22,21 +39,26 @@
     <![endif]-->
 
     <!-- Add your site or application here -->
+    <input type="checkbox" id="mobilenav" class="mobilenav" /><label for="mobilenav"></label>
     <header>
         <div class="container">
             <img src="images/tawo-logo.png">
-
+            
             <nav>
-                <ul>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Menu</a></li>
+                <ul id="menu">
+                    <li><a href="#"><img src="https://image.freepik.com/free-icon/facebook-logo-in-circular-shape_318-60407.jpg"></a></li>
+                    <li><a href="#"><img src="https://image.freepik.com/free-icon/facebook-logo-in-circular-shape_318-60407.jpg"></a></li>
+                    <li><a href="#reg">Regierung</a></li>
+                    <li><a href="#kan">Kandidaten</a></li>
+                    <li><a href="#rat">Grosser Rat</a></li>
+                    <li><a href="#sorg">Sorgenbarometer</a></li>
+                    
                 </ul>
-                <img src="https://image.freepik.com/free-icon/facebook-logo-in-circular-shape_318-60407.jpg">
-                <img src="https://image.freepik.com/free-icon/facebook-logo-in-circular-shape_318-60407.jpg">
+                
             </nav>
-
+<script>
+    
+</script>
         </div>
     </header>
 
@@ -44,14 +66,14 @@
 
         <!-- Logo, Titel & Einleitung -->
         <article class="wide intro">
-            <h1>Wahlen BS 2016</h1>
-
+            <h1>Wahlen Basel-Stadt 2016</h1>
+            
             <p>Am 23. Oktober 2016 wählt Basel-Stadt eine neue Regierung und ein neues Parlament. Bleibt Basel weiterhin in linken Händen oder gibt es einen Machtwechsel? Alles, was Sie über die Gesamterneuerungswahlen wissen müssen.</p>
 
         </article>
         <!-- die Regierung Einleitung & Präsidium Grafik -->
 
-        <article class="wide">
+        <article class="wide" id="reg">
         <h2>Regierung / Präsidium</h2>
 
         </article>
@@ -60,10 +82,8 @@
             <p>Steht die rot-grüne Mehrheit auf der Kippe? Muss Hans-Peter Wessels in den zweiten Wahlgang? Und wer wird Guy Morin beerben? Die repräsentative Wahlumfrage der TagesWoche und der «bz Basel» offenbart manche Überraschung.</p>
             <div id="praesidium" style="width: 80%; height: 250px; text-align:left;"></div>
 
-            <ul>
-                <li>Hier steht Text</li>
-            </ul>
-            <a href="#" class="button" target="_blank">Button Text</a><a href="#" class="button" target="_blank">Button Text</a><a href="#" class="button" target="_blank">Button Text</a>
+            
+            <a href="http://www.tageswoche.ch/+wog91" class="button" target="_blank">Die Umfrageresultate im Überblick</a>
         </article>
 
 
@@ -77,9 +97,11 @@
 
 
         <!-- Köpfe -->
-        <article class="wide"></article>
-        <article class="wide heads">
+        <article class="wide" id="kan">
         <h2>Kandidaten</h2>
+        </article>
+        <article class="wide heads">
+        
 
 
             <div><a href="http://www.tageswoche.ch/de/2016_29/basel/724700/" target="_blank"><img src="images/evaherzog.jpg"><span><abbr>Eva</abbr> Herzog<small>zum Porträt »</small></span></a></div>
@@ -102,20 +124,20 @@
 
         <!-- Grafik -->
 
-        <article class="wide">
+        <article class="wide" id="rat">
         <h2>Grosser Rat</h2>
         </article>
 
         <article class="short">
 
             <div id="parlament_chart" style="width: 100%; margin: 0 0 0 0; height: 700px;"></div>
-            <a href="#" class="button" target="_blank">Button Text</a>
+            <a href="http://www.tageswoche.ch/+ipo8c" class="button" target="_blank">So schneiden die Parteien in der Wahlumfrage ab.</a>
         </article>
 
           <!-- Übersicht der Parteien -->
         <article class="short">
 
-            <p>Für die 100 Sitze im  Grossen Rat liegen insgesamt 763 Kandidaturen vor. Hier erfahren Sie, welche Parteien die Nase vorn haben und welche um ihren Einfluss im Basler Parlament zittern müssen.<br/><br/>Auch geben wir Einblick, für was sich die Parteien in den letzten vier Jahren im Grossen Rat eingesetzt haben.</p>
+            <p>Für die 100 Sitze im  Grossen Rat liegen insgesamt 763 Kandidaturen vor. Hier erfahren Sie, welche Parteien die Nase vorn haben und welche um ihren Einfluss im Basler Parlament zittern müssen.<br/><br/>Auch geben wir Einblick, für was sich die <a target="_blank" href="http://www.tageswoche.ch/de/2016_36/basel/728639/">grossen</a> und <a target="_blank" href="http://www.tageswoche.ch/de/2016_36/basel/728494/">kleinen</a> Parteien in den letzten vier Jahren im Grossen Rat eingesetzt haben.</p>
              <div id="tabs">
 
             <ul>
@@ -301,8 +323,8 @@
 
 
         <!-- Sorgenbarometer -->
-        <article class="wide">
-            <h2>das Sorgenbarometer</h2>
+        <article class="wide" id="sorg">
+            <h2>Sorgenbarometer</h2>
         </article>
       <article class="wide">
         <div id="sorgen1" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
@@ -329,15 +351,32 @@
 
         -->
 
-        <article class="short"></article>
+        <article class="wide">
+        <h2>Weitere Artikel zum Thema</h2>
+            <p>Hier ist noch ein weiterer Artikel <a href="#">der sich lesen lohnt.</a></p>
+            <p>Hier ist noch ein weiterer Artikel <a href="#">der sich lesen lohnt.</a></p>
+            <p>Hier ist noch ein weiterer Artikel <a href="#">der sich lesen lohnt.</a></p>
+            <p>Hier ist noch ein weiterer Artikel <a href="#">der sich lesen lohnt.</a></p>
+        
+        </article>
 
 
     </section>
-
-    <footer>
-    <img class="keyvisual" src="images/keyvisual.png">
+      
+    
+    
+    <footer style="clear:both;">
+        <div class="container">
+            <p>
+                <strong>Texte:</strong> TagesWoche<br/>
+                <strong>Umsetzung:</strong> Felix Michel, Stefan Kempf<br/>
+                <strong>Diagramme:</strong> <a href="http://www.highcharts.com" target="_blank">highcharts.com</a><br/>
+                <strong>Umfrage:</strong> <a href="https://sotomo.ch" target="_blank">sotomo.ch</a>
+            
+            </p>
+        </div>
     </footer>
-
+<img class="keyvisual" src="images/keyvisual.png">
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
