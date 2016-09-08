@@ -38,7 +38,7 @@ footer {
 }
 
 footer p {
-    
+    padding:0 30px;
     margin-top:28px;
     @include MQ(S) {
         padding:0 10px;
@@ -346,10 +346,10 @@ h3 { font-size: 25px; font-family: $laufschrift;  padding:10px 10px 10px 46px; f
 h4 { font-size: 16px; font-family: $laufschrift; font-weight:bold; margin:0 0 24px 0;}
 p, ul { margin:0 0 24px 0; }
 p, li, a {font-size: 16px; font-family: $laufschrift;  line-height:24px;}
-li { padding-left:30px;}
+li { padding-left:20px;}
 #tabs > div li:before {content: "• "; color: black; margin-right:7px; margin-left: -18px;}
 #tabs > div a {color:#008148 !important;}
-a:hover {text-decoration: none !important;}
+#tabs a:hover {text-decoration: none !important;}
 .parteilogo {width:170px; margin:0 auto 10px auto; float:right;}
 strong {font-weight:bold;}
 .ui-tabs-active {background:$diagramm5 !important; padding-bottom:0 !important;}
