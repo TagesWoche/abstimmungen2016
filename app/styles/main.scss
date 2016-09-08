@@ -4,7 +4,45 @@
 @import 'partials/jqueryui'; // jquery ui
 @import 'https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Montserrat:400,700';
 
+@font-face {
+  font-family:"icons";
+  src:url("fonts/icons.eot?a0c95a30cf69e13199a538dde99c2c87");
+  src:url("fonts/icons.eot?#iefix") format("embedded-opentype"),
+  url("fonts/icons.woff?a0c95a30cf69e13199a538dde99c2c87") format("woff"),
+  url("fonts/icons.ttf?a0c95a30cf69e13199a538dde99c2c87") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
 
+.icon {
+
+  font-family: "icons";
+  display:inline-block;
+  vertical-align:middle;
+  line-height:1;
+  font-weight:normal;
+  font-style:normal;
+  speak:none;
+  text-decoration:inherit;
+  text-transform:none;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-size: 30px;
+}
+
+.icon:hover {
+  text-decoration: none;
+  color: $darkgrey;
+}
+
+.icon-search-24:before {
+  content:"\f10e";
+}
+
+.icon-star-24:before {
+  content:"\f110";
+}
 
 .browsehappy {
     margin: 0.2em 0;
@@ -38,7 +76,7 @@ footer {
 }
 
 footer p {
-    padding:0 30px;
+    padding:0 15px;
     margin-top:28px;
     @include MQ(S) {
         padding:0 10px;
@@ -85,7 +123,7 @@ li a:hover {
 
 .container .button {
     padding:4px 8px;
-    
+
     border-radius: 2px;
     margin:20px 4px;
     color:#008148;
@@ -98,9 +136,9 @@ li a:hover {
 
 .container .button:hover {
     text-decoration:underline !important;
-    
-    
-    
+
+
+
 }
 /*
 .container .button {
@@ -125,7 +163,7 @@ li a:hover {
 */
 
 .content > article {
-    
+
     height:auto;
     display:block;
 }
@@ -165,10 +203,10 @@ h2 {
     font-weight: $titel-weight;
     font-size: 22px;
     color:#000;
-    
+
     line-height:$line-height;
     margin-bottom:8px;
-    
+
     border-bottom: 2px solid #D9D9D9;
     padding-bottom:4px;
 }
@@ -236,8 +274,8 @@ a:hover {
 
 .intro p {
     margin-bottom:0;
-    
-    
+
+
 }
 
 
@@ -279,9 +317,9 @@ a:hover {
 
 .heads div:hover img {
     filter:grayscale(30%);
-    
-    
-    
+
+
+
 }
 
 .heads div span {
@@ -299,8 +337,8 @@ a:hover {
         @include MQ(S) {
             top:-68px;
             }
-    
-    
+
+
 }
 
 .heads div span:before {
@@ -325,11 +363,11 @@ a:hover {
 .heads small {
     display:block;
     font-size:14px;
-    
+
 }
 
 .heads abbr {
-    
+
     @include MQ(S) {
             display:none;
             }
@@ -428,7 +466,7 @@ label[for="mobilenav"] {
 
 .slicknav_menu {
     display:none;
-    
+
     background:url("../images/tawo-logo.png") no-repeat $lightgrey;
     border-bottom:1px solid $mediumgrey;
     background-size:101px 40px;
