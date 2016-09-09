@@ -375,6 +375,14 @@ a:hover {
             }
 }
 
+.heads ul {
+    text-align:left;
+    width:50%;
+    margin-left:1%;
+    @include MQ(M) {
+            width:100%;
+            }
+}
 
 // Parteien Übersicht
 
