@@ -414,81 +414,46 @@
     <!-- endbuild -->
 
     <!-- Analytics -->
-      <script>
-if (netmetrix) {
-    var nmPublicationNumber = '1';
-    var nmPublicationName = 'Tageswoche';
-    var nmArticleNumber = '728630';
-    var nmArticleName = 'Ein Spiel um Leben und Tod – und Tausende schauen zu';
-    var nmSectionNumber = '50';
-    var nmSectionName = 'kultur';
+    <!-- Asynchronous google analytics-->
 
-    nmArticleName = escape(nmArticleName.replace(/\s/g, '-'));
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-22593782-4']);
+      _gaq.push(['_setDomainName', 'tageswoche.ch']);
+      _gaq.push(['_trackPageview']);
 
-    var netmetrixKey = '';
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 
-    if (nmPublicationNumber != '') {
-        netmetrixKey = netmetrixKey + '/publication_' + nmPublicationNumber + '_' + nmPublicationName;
-    }
-    if (nmSectionNumber != '') {
-        netmetrixKey = netmetrixKey + '/section_' + nmSectionNumber + '_' + nmSectionName;
-    }
-    if (nmArticleNumber != '') {
-        netmetrixKey = netmetrixKey + '/article_' + nmArticleNumber + '_' + nmArticleName;
-    }
+    <!-- Chartbeat -->
+    <script type='text/javascript'>
+      var _sf_async_config={};
+      /** CONFIGURATION START **/
+      _sf_async_config.uid = 52858;
+      _sf_async_config.domain = 'tageswoche.ch';
+      _sf_async_config.useCanonical = true;
+      _sf_async_config.sections = 'Basel';
+      _sf_async_config.authors = 'Felix Michel, Stefan Kempf';
+      /** CONFIGURATION END **/
+      (function(){
+        function loadChartbeat() {
+          window._sf_endpt=(new Date()).getTime();
+          var e = document.createElement('script');
+          e.setAttribute('language', 'javascript');
+          e.setAttribute('type', 'text/javascript');
+          e.setAttribute('src', 'https://static.chartbeat.com/js/chartbeat.js');
+          document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+          loadChartbeat : function() { oldonload(); loadChartbeat(); };
+      })();
+    </script>
 
-    if (document.location.href.indexOf("wetter") != -1) {
-        netmetrixKey = '/wetter'
-    }
-    if (document.location.href.indexOf("omniticker") != -1) {
-        netmetrixKey = '/omniticker'
-    }
 
-    if (document.location.href.indexOf("user/profile") != -1) {
-        netmetrixKey = '/user/profile'
-    }
-    else if (document.location.href.indexOf("user") != -1) {
-        netmetrixKey = '/user'
-    }
-
-    if (netmetrixKey == '') {
-        netmetrixKey = '/other/' + encodeURIComponent(document.location.href);
-    }
-
-    netmetrix.hit(netmetrixKey);
-}
-</script>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
-{ (i[r].q=i[r].q||[]).push(arguments)}
-,i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','tg_ga');
-tg_ga('create', 'UA-22593782-4', 'auto');
-tg_ga('require', 'displayfeatures');
-tg_ga('send', 'pageview', {
-  'page': '/de/2016_36/kultur/728630',
-  'title': $('title').html()
-});
-</script>
-
-<script type="text/javascript">
-/** CONFIGURATION START **/
-var _sf_async_config={};
-_sf_async_config.uid = 52858;
-_sf_async_config.domain = "tageswoche.ch";
-_sf_async_config.sections = "Kultur";_sf_async_config.authors = "Naomi Gregoris";/** CONFIGURATION END **/
-(function() {
-function loadChartbeat()
-{ window._sf_endpt = (new Date()).getTime(); var e = document.createElement('script'); e.setAttribute('language', 'javascript'); e.setAttribute('type', 'text/javascript'); e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js'); document.body.appendChild(e); }
-;
-var oldonload = window.onload;
-window.onload = (typeof window.onload != 'function') ?
-loadChartbeat : function()
-{ oldonload(); loadChartbeat(); }
-;
-})();
-</script>
-
-</body>
+  </body>
 </html>
