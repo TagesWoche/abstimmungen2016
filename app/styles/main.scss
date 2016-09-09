@@ -63,7 +63,7 @@ header {
         }
 }
 
-header > div > img {
+header > div img {
     height:40px;
     float:left;
     margin:10px 0 0 1%;
@@ -96,6 +96,12 @@ nav {
 nav ul {
     float:left;
     margin:15px 50px 0 0;
+    @include MQ(M) {
+        margin:20px 0 0 0;
+        width:95%;
+        text-align:right;
+        
+    }
 }
 
 nav img {
@@ -109,6 +115,19 @@ nav li {
     margin-right:4px;
     @include MQ(M){
             float:none;
+            background:$lightgrey;
+            width:100%;
+            padding:0 5% 0 0 !important;
+        }
+}
+
+nav li:nth-child(-n+1) {
+    @include MQ(M){
+            float:right;
+            padding:0 0 0 5px !important;
+            margin: 0 !important;
+            width:auto;
+            margin-right:10px;
         }
 }
 
@@ -211,6 +230,9 @@ h2 {
 
     border-bottom: 2px solid #D9D9D9;
     padding-bottom:4px;
+    @include MQ(S){
+        padding-left:10px;
+    }
 }
 
 p, li, a, span {
