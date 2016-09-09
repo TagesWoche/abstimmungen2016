@@ -14,7 +14,7 @@ $(function () {
     },
 
     lang: {
-        drillUpText: '◁ Zurück zur Übersicht'
+        drillUpText: '◁ Zurück'
     },
 
     chart: {
@@ -182,7 +182,7 @@ $(function () {
         id: 'brutschin',
         data: [
           ['SP', 94],
-          ['BGB', 84],
+          ['GB', 84],
           ['EVP', 70],
           ['glp', 63],
           ['CVP', 40],
@@ -202,7 +202,7 @@ $(function () {
           ['glp', 64],
           ['EVP', 45],
           ['SP', 25],
-          ['BGB', 12]
+          ['GB', 12]
         ]
       }, {
         id: 'duerr',
@@ -215,13 +215,13 @@ $(function () {
           ['BDP', 56],
           ['glp', 53],
           ['SP', 19],
-          ['BGB', 8]
+          ['GB', 8]
         ]
       }, {
         id: 'wessels',
         data: [
           ['SP', 95],
-          ['BGB', 80],
+          ['GB', 80],
           ['glp', 58],
           ['EVP', 50],
           ['BDP', 35],
@@ -241,12 +241,12 @@ $(function () {
           ['glp', 32],
           ['EVP', 31],
           ['SP', 1],
-          ['BGB', 0]
+          ['GB', 0]
         ]
       }, {
         id: 'ackermann',
         data: [
-          ['BGB', 89],
+          ['GB', 89],
           ['SP', 78],
           ['EVP', 59],
           ['glp', 39],
@@ -259,7 +259,7 @@ $(function () {
       }, {
         id: 'mueck',
         data: [
-          ['BGB', 75],
+          ['GB', 75],
           ['SP', 64],
           ['EVP', 30],
           ['glp', 13],
@@ -276,7 +276,7 @@ $(function () {
           ['EVP', 30],
           ['SP', 27],
           ['LDP', 19],
-          ['BGB', 18],
+          ['GB', 18],
           ['CVP', 12],
           ['BDP', 11],
           ['SVP', 8],
@@ -305,7 +305,7 @@ $(function () {
       text: null
     },
     xAxis: {
-      categories: ['SP', 'SVP', 'LDP', 'FDP', 'BGB', 'CVP', 'glp', 'BDP', 'EVP', 'VA', 'EDU', 'Andere' ],
+      categories: ['SP', 'SVP', 'LDP', 'FDP', 'GB', 'CVP', 'glp', 'BDP', 'EVP', 'VA', 'EDU', 'Andere' ],
       title: {
         text: null
       }
@@ -340,7 +340,7 @@ $(function () {
       layout: 'vertical',
       align: 'right',
       verticalAlign: 'top',
-      x: -40,
+      x: -10,
       y: 80,
       floating: true,
       borderWidth: 1,
