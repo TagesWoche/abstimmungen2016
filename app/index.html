@@ -54,7 +54,7 @@
                 <ul id="menu">
                     <li style="padding-left: 5px;"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.tageswoche.ch/wahlen2016/" target="_blank"><i class="icon icon-search-24"></i></a></li>
                     <li><a href="https://twitter.com/home?status=Alle%20Informationen%20%C3%BCber%20%23wahlenbs%20auf%20%40Tageswoche%20unter%20www.tageswoche.ch/wahlen2016" target="_blank"><i class="icon icon-star-24"></i></a></li>
-                    <li><a href="#reg">Regierung</a></li>
+                    <li><a href="#smart">Wahlempfehlungen</a></li>
                     <li><a href="#kan">Kandidaten</a></li>
                     <li><a href="#rat">Grosser Rat</a></li>
                     <li><a href="#sorg">Sorgenbarometer</a></li>
@@ -356,22 +356,26 @@
 
 
 
-        <!-- Smart Vote
+       <!-- Smart Vote -->
+        
+        <article class="wide" id="smart">
+            <h2>Smart Vote </h2>
+        
+        </article>
+        
         <article class="short">
-            <h2>Smartvote Kandidaten</h2>
-            <p>Informieren Sie sich gezielt über einzelne Kandidierende und ihre politischen Profile: mit der Suchmaske von Smartvote.</p>
-            <iframe width="100%" height="200px" scrolling="no" src="https://client.smartvote.ch/#/iframes/tageswoche/db/elections/95/candidates"></iframe>
+            <h2>Kandidaten &amp; politische Profile</h2>
+            <p>Wer sind die Kandidaten für den Regierungs- und Grosser Rat? Informieren Sie sich über die einzelnen Politiker und ihre politischen Profile.</p>
+            <iframe style="width:100%;" scrolling="no" src="https://client.smartvote.ch/#/iframes/tageswoche/db/elections/95/candidates"></iframe>
 
 
         </article>
 
         <article class="short">
-            <h2>Wahlempfelung</h2>
-            <p>Welcher Kandidat passt zu Ihnen? Die Wahlempfehlung von smartvote hilft bei Ihrer Wahl.</p>
-            <iframe width="100%" height="200px" scrolling="no" src="https://client.smartvote.ch/#/iframes/tageswoche/recommendation/start"></iframe>
+            <h2>Wahlempfelungen</h2>
+            <p>Wo stehen Sie politisch? Was ist Ihre Meinung zu den wichtigsten Themen? Und welcher Kandidat passt zu Ihnen? Finden Sie es heraus mit unserem Fragebogen.</p>
+            <iframe style="width:100%;" scrolling="no" src="https://client.smartvote.ch/#/iframes/tageswoche/recommendation/start"></iframe>
         </article>
-
-        -->
 
         <article class="wide more">
         <h2>Weitere Artikel zum Thema</h2>
@@ -414,7 +418,7 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- <script>iFrameResize({log:true})</script> -->
+    
     <script src="scripts/drilldown.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -462,6 +466,17 @@
           loadChartbeat : function() { oldonload(); loadChartbeat(); };
       })();
     </script>
+      
+      <!-- NET-Metrix-Audit version="1.5" -->
+<script language="JavaScript" type="text/javascript"> <!--
+var NETMX="http://tagesw.wemfbox.ch/cgi-bin/ivw/CP/wahlen2016";
+document.write("<img src=\""+NETMX+"?r="+escape(document.referrer)+"&d="+(Math.random()*100000)+"&x="+screen.width+"x"+screen.height+"\" width=\"1\" height=\"1\" alt=\"\" />");
+// -->
+</script>
+<noscript>
+<img src="http://tagesw.wemfbox.ch/cgi-bin/ivw/CP/wahlen2016" width="1" height="1" alt="" />
+</noscript>
+<!-- /NET-Metrix-Audit -->
 
 
   </body>
