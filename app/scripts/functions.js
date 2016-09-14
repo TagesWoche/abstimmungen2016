@@ -639,5 +639,5 @@ $('#live-data-google-2').highcharts({
         format: '{point.y:.1f}%'
       }
     }
-  },
+  }
 });
