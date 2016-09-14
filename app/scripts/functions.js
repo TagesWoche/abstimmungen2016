@@ -522,3 +522,122 @@ $(function () {
     ]
   });
 });
+
+// google charts live charts
+
+$('#live-data-google-1').highcharts({
+  exporting: {
+    enabled: false
+  },
+  chart: {
+    type: 'column'
+  },
+  data: {
+    googleSpreadsheetKey: '1_z8CLRRoCfvVio0z1So600Mo5058PXs1RhIBE6ZWkgI',
+    startColumn: 0,
+    endColumn: 1,
+    startRow: 0,
+    googleSpreadsheetWorksheet: 1
+  },
+  title: {
+    text: null
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: null
+    },
+    labels: {
+      overflow: 'justify',
+      formatter: function () {
+        return this.value + "%";
+      }
+    }
+  },
+  xAxis: {
+    type: 'category'
+  },
+  series: [
+    {
+      color: '#008148'
+    }
+    ],
+  credits: {
+    enabled: false
+  },
+  tooltip: {
+    enabled: false
+  },
+  legend: {
+    enabled: false
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0.1,
+      borderWidth: 0,
+      dataLabels: {
+        enabled: true,
+        format: '{point.y:.1f}%'
+      }
+    }
+  },
+});
+
+
+$('#live-data-google-2').highcharts({
+  exporting: {
+    enabled: false
+  },
+  chart: {
+    type: 'bar'
+  },
+  data: {
+    googleSpreadsheetKey: '1_z8CLRRoCfvVio0z1So600Mo5058PXs1RhIBE6ZWkgI',
+    startColumn: 0,
+    endColumn: 1,
+    startRow: 0,
+    googleSpreadsheetWorksheet: 2
+  },
+  title: {
+    text: null
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: null
+    },
+    labels: {
+      overflow: 'justify',
+      formatter: function () {
+        return this.value + "%";
+      }
+    }
+  },
+  xAxis: {
+    type: 'category'
+  },
+  series: [
+    {
+      color: '#008148'
+    }
+  ],
+  credits: {
+    enabled: false
+  },
+  tooltip: {
+    enabled: false
+  },
+  legend: {
+    enabled: false
+  },
+  plotOptions: {
+    bar: {
+      pointPadding: 0.1,
+      borderWidth: 0,
+      dataLabels: {
+        enabled: true,
+        format: '{point.y:.1f}%'
+      }
+    }
+  },
+});
