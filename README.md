@@ -2,6 +2,10 @@
 
 Overview page for Regierungsrats- und Grossratswahlen in Basel-Stadt 2016. For the visualisations, we used highcharts.
 
+## Get the project
+
+Download or clone the project and run `npm install` and `bower install` in order to get all files.
+
 ## Build & development
 
-Install all dependencies with `npm install` and the run `bower install`. To start the local server, run `grunt serve` and to build the project run `grunt build`.
+To start the local server, run `grunt serve` and to build the project run `grunt build`.
