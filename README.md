@@ -1,12 +1,7 @@
 # abstimmungen2016
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+Overview page for Regierungsrats- und Grossratswahlen in Basel-Stadt 2016. For the visualisations, we used highcharts.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+Install all dependencies with `npm install` and the run `bower install`. To start the local server, run `grunt serve` and to build the project run `grunt build`.
