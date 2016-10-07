@@ -1,6 +1,6 @@
 # abstimmungen2016
 
-Overview page for Regierungsrats- und Grossratswahlen in Basel-Stadt 2016. For the visualisations, we used highcharts.
+Overview page for Regierungsrats- und Grossratswahlen in Basel-Stadt 2016. For the visualisations, we used highcharts. Live version: http://www.tageswoche.ch/wahlen2016
 
 ## Get the project
 
