@@ -42,7 +42,15 @@ $(function () {
     },
 
     legend: {
-      enabled: false
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -10,
+      y: 380,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+      shadow: true
     },
 
     tooltip: {
@@ -50,8 +58,10 @@ $(function () {
     },
 
     plotOptions: {
-      series: {
+      bar: {
+        pointPadding: 0,
         borderWidth: 0,
+        groupPadding: 0.1,
         dataLabels: {
           enabled: true,
           format: '{point.y:.1f}%'
@@ -75,8 +85,8 @@ $(function () {
     },
 
     series: [{
-      name: 'Kandidaten',
-      color: '#008148',
+      name: '1. Umfrage',
+      color: '#00b766',
       data: [{
         name: 'Eva Herzog (SP)',
         y: 63,
@@ -98,37 +108,77 @@ $(function () {
         y: 51,
         drilldown: 'duerr'
       }, {
-        color: '#00b766',
         name: 'Hans-Peter Wessels (SP)',
         y: 48,
         drilldown: 'wessels'
       }, {
-        color: '#00b766',
         name: 'Lorenz Nägelin (SVP)',
         y: 40,
         drilldown: 'naegelin'
       }, {
-        color: '#00b766',
         name: 'Elisabeth Ackermann (Grüne)',
         y: 40,
         drilldown: 'ackermann'
       }, {
-        color: '#00b766',
         name: 'Heidi Mück (Basta!)',
         y: 32,
         drilldown: 'mueck'
       }, {
-        color: '#00b766',
         name: 'Martina Bernasconi (glp)',
         y: 21,
         drilldown: 'bernasconi'
       }, {
-        color: '#00b766',
         name: 'Andere',
         y: 17
       }
       ]
-    }],
+    },
+      {
+        name: '2. Umfrage',
+        color: '#008148',
+        data: [{
+          name: 'Eva Herzog (SP)',
+          y: 63,
+          drilldown: 'herzog2'
+        }, {
+          name: 'Conradin Cramer (LDP)',
+          y: 59,
+          drilldown: 'cramer2'
+        }, {
+          name: 'Christoph Brutschin (SP)',
+          y: 58,
+          drilldown: 'brutschin2'
+        }, {
+          name: 'Lukas Engelberger (CVP)',
+          y: 56,
+          drilldown: 'engelberger2'
+        }, {
+          name: 'Baschi Dürr (FDP)',
+          y: 51,
+          drilldown: 'duerr2'
+        }, {
+          name: 'Hans-Peter Wessels (SP)',
+          y: 47,
+          drilldown: 'wessels2'
+        }, {
+          name: 'Lorenz Nägelin (SVP)',
+          y: 42,
+          drilldown: 'naegelin2'
+        }, {
+          name: 'Elisabeth Ackermann (Grüne)',
+          y: 45,
+          drilldown: 'ackermann2'
+        }, {
+          name: 'Heidi Mück (Basta!)',
+          y: 35,
+          drilldown: 'mueck2'
+        }, {
+          name: 'Martina Bernasconi (glp)',
+          y: 21,
+          drilldown: 'bernasconi2'
+        }
+        ]
+      }],
     drilldown: {
       drillUpButton: {
         relativeTo: 'spacingBox',
@@ -154,6 +204,7 @@ $(function () {
       },
       series: [{
         id: 'herzog',
+        name: '1. Umfrage',
         data: [
           ['SP', 96],
           ['EVP', 84],
@@ -167,6 +218,7 @@ $(function () {
         ]
       }, {
         id: 'cramer',
+        name: '1. Umfrage',
         data: [
           ['FDP', 99],
           ['LDP', 98],
@@ -180,6 +232,7 @@ $(function () {
         ]
       }, {
         id: 'brutschin',
+        name: '1. Umfrage',
         data: [
           ['SP', 94],
           ['GB', 84],
@@ -193,6 +246,7 @@ $(function () {
         ]
       }, {
         id: 'engelberger',
+        name: '1. Umfrage',
         data: [
           ['CVP', 100],
           ['FDP', 96],
@@ -206,6 +260,7 @@ $(function () {
         ]
       }, {
         id: 'duerr',
+        name: '1. Umfrage',
         data: [
           ['FDP', 94],
           ['CVP', 84],
@@ -219,6 +274,7 @@ $(function () {
         ]
       }, {
         id: 'wessels',
+        name: '1. Umfrage',
         data: [
           ['SP', 95],
           ['GB', 80],
@@ -232,6 +288,7 @@ $(function () {
         ]
       }, {
         id: 'naegelin',
+        name: '1. Umfrage',
         data: [
           ['SVP', 92],
           ['FDP', 78],
@@ -245,6 +302,7 @@ $(function () {
         ]
       }, {
         id: 'ackermann',
+        name: '1. Umfrage',
         data: [
           ['GB', 89],
           ['SP', 78],
@@ -258,6 +316,7 @@ $(function () {
         ]
       }, {
         id: 'mueck',
+        name: '1. Umfrage',
         data: [
           ['GB', 75],
           ['SP', 64],
@@ -271,6 +330,7 @@ $(function () {
         ]
       }, {
         id: 'bernasconi',
+        name: '1. Umfrage',
         data: [
           ['glp', 93],
           ['EVP', 30],
@@ -282,9 +342,128 @@ $(function () {
           ['SVP', 8],
           ['FDP', 8]
         ]
-      }
-
-      ]
+      },
+      {
+        id: 'herzog2',
+        name: '2. Umfrage',
+        data: [
+          ['SP', 93],
+          ['BGB', 89],
+          ['glp', 53],
+          ['LDP', 43],
+          ['FDP', 33],
+          ['CVP', 19],
+          ['SVP', 17]
+        ]
+      }, {
+        id: 'cramer2',
+        name: '2. Umfrage',
+        data: [
+          ['CVP', 96],
+          ['LDP', 95],
+          ['FDP', 92],
+          ['SVP', 78],
+          ['glp', 44],
+          ['SP', 28],
+          ['BGB', 6]
+        ]
+      }, {
+        id: 'brutschin2',
+        name: '2. Umfrage',
+        data: [
+          ['SP', 94],
+          ['BGB', 82],
+          ['LDP', 38],
+          ['glp', 32],
+          ['FDP', 27],
+          ['CVP', 25],
+          ['SVP', 8]
+        ]
+      }, {
+        id: 'engelberger2',
+        name: '2. Umfrage',
+        data: [
+          ['CVP', 98],
+          ['FDP', 91],
+          ['LDP', 89],
+          ['SVP', 70],
+          ['glp', 37],
+          ['SP', 29],
+          ['BGB', 5]
+        ]
+      }, {
+        id: 'duerr2',
+        name: '2. Umfrage',
+        data: [
+          ['FDP', 95],
+          ['LDP', 85],
+          ['CVP', 85],
+          ['SVP', 74],
+          ['glp', 38],
+          ['SP', 19],
+          ['BGB', 4]
+        ]
+      }, {
+        id: 'wessels2',
+        name: '2. Umfrage',
+        data: [
+          ['SP', 89],
+          ['BGB', 81],
+          ['glp', 22],
+          ['CVP', 14],
+          ['LDP', 12],
+          ['FDP', 6],
+          ['SVP', 3]
+        ]
+      }, {
+        id: 'naegelin2',
+        name: '2. Umfrage',
+        data: [
+          ['SVP', 89],
+          ['FDP', 77],
+          ['LDP', 73],
+          ['CVP', 72],
+          ['glp', 5],
+          ['SP', 4],
+          ['BGB', 1]
+        ]
+      }, {
+        id: 'ackermann2',
+        name: '2. Umfrage',
+        data: [
+          ['BGB', 91],
+          ['SP', 86],
+          ['glp', 32],
+          ['CVP', 5],
+          ['LDP', 3],
+          ['FDP', 2],
+          ['SVP', 1]
+        ]
+      }, {
+        id: 'mueck2',
+        name: '2. Umfrage',
+        data: [
+          ['BGB', 84],
+          ['SP', 66],
+          ['glp', 12],
+          ['LDP', 4],
+          ['CVP', 2],
+          ['FDP', 0],
+          ['SVP', 0]
+        ]
+      }, {
+        id: 'bernasconi2',
+        name: '2. Umfrage',
+        data: [
+          ['glp', 95],
+          ['SP', 21],
+          ['LDP', 14],
+          ['FDP', 13],
+          ['CVP', 12],
+          ['BGB', 11],
+          ['SVP', 4]
+        ]
+      }]
     }
   });
 });
