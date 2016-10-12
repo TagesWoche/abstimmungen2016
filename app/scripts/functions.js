@@ -127,9 +127,6 @@ $(function () {
         name: 'Martina Bernasconi (glp)',
         y: 21,
         drilldown: 'bernasconi'
-      }, {
-        name: 'Andere',
-        y: 17
       }
       ]
     },
@@ -484,7 +481,7 @@ $(function () {
       text: null
     },
     xAxis: {
-      categories: ['SP', 'SVP', 'LDP', 'FDP', 'GB', 'CVP', 'glp', 'BDP', 'EVP', 'VA', 'EDU', 'Andere' ],
+      categories: ['SP', 'SVP', 'LDP', 'FDP', 'GB', 'CVP', 'glp', 'BDP*', 'EVP', 'VA*', 'EDU*', 'Andere' ],
       title: {
         text: null
       }
@@ -492,7 +489,7 @@ $(function () {
     yAxis: {
       min: 0,
       title: {
-        text: 'Wähleranteile der Parteien'
+        text: "Wähleranteile der Parteien"
       },
       labels: {
         overflow: 'justify',
@@ -532,7 +529,7 @@ $(function () {
     series: [{
         color: '#008148',
         name: '2. Umfrage 2016',
-        data: [30.4, 17.4, 12.8, 10.4, 10.6, 6.5, 4.5, 3.9, 3.94, 0.59, 0.49, 3.2]
+        data: [30.4, 17.4, 12.8, 10.4, 10.6, 6.5, 4.5, 0, 3.94, 0, 0, 3.2]
       }, {
       color: '#00b766',
       name: '1. Umfrage 2016',
