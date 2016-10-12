@@ -381,7 +381,10 @@ $(function () {
       text: null
     },
     xAxis: {
-        type: 'category'
+      categories: ['Baschi Dürr', 'Elisabeth Ackermann', 'Martina Bernasconi', 'Andere', 'Christian Mueller', 'Eric Weber'],
+      title: {
+        text: null
+      }
     },
     yAxis: {
       min: 0,
@@ -399,7 +402,15 @@ $(function () {
       enabled: false
     },
     legend: {
-      enabled: false
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -10,
+      y: 10,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+      shadow: true
     },
     plotOptions: {
       column: {
@@ -415,21 +426,13 @@ $(function () {
       enabled: false
     },
     series: [{
+      color: '#00b766',
+      name: '1. Umfrage',
+      data: [44, 30, 8, 18]
+    }, {
       color: '#008148',
-      data: [{
-        name: 'Baschi Dürr',
-        y: 44
-      }, {
-        name: 'Elisabeth Ackermann',
-        y: 30
-      }, {
-        name: 'Martina Bernasconi',
-        y: 8
-      }, {
-        name: 'Andere',
-        y: 18
-      }
-      ]
+      name: '2. Umfrage',
+      data: [41, 37, 8, 7, 3, 3]
     }]
   });
 });
