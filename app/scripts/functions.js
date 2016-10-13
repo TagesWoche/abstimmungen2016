@@ -112,13 +112,13 @@ $(function () {
         y: 48,
         drilldown: 'wessels'
       }, {
-        name: 'Lorenz Nägelin (SVP)',
-        y: 40,
-        drilldown: 'naegelin'
-      }, {
         name: 'Elisabeth Ackermann (Grüne)',
         y: 40,
         drilldown: 'ackermann'
+      }, {
+        name: 'Lorenz Nägelin (SVP)',
+        y: 40,
+        drilldown: 'naegelin'
       }, {
         name: 'Heidi Mück (Basta!)',
         y: 32,
@@ -158,13 +158,13 @@ $(function () {
           y: 47,
           drilldown: 'wessels2'
         }, {
-          name: 'Lorenz Nägelin (SVP)',
-          y: 42,
-          drilldown: 'naegelin2'
-        }, {
           name: 'Elisabeth Ackermann (Grüne)',
           y: 45,
           drilldown: 'ackermann2'
+        }, {
+          name: 'Lorenz Nägelin (SVP)',
+          y: 42,
+          drilldown: 'naegelin2'
         }, {
           name: 'Heidi Mück (Basta!)',
           y: 35,
@@ -345,7 +345,7 @@ $(function () {
         name: '2. Umfrage',
         data: [
           ['SP', 93],
-          ['BGB', 89],
+          ['GB', 89],
           ['glp', 53],
           ['LDP', 43],
           ['FDP', 33],
@@ -362,14 +362,14 @@ $(function () {
           ['SVP', 78],
           ['glp', 44],
           ['SP', 28],
-          ['BGB', 6]
+          ['GB', 6]
         ]
       }, {
         id: 'brutschin2',
         name: '2. Umfrage',
         data: [
           ['SP', 94],
-          ['BGB', 82],
+          ['GB', 82],
           ['LDP', 38],
           ['glp', 32],
           ['FDP', 27],
@@ -386,7 +386,7 @@ $(function () {
           ['SVP', 70],
           ['glp', 37],
           ['SP', 29],
-          ['BGB', 5]
+          ['GB', 5]
         ]
       }, {
         id: 'duerr2',
@@ -398,14 +398,14 @@ $(function () {
           ['SVP', 74],
           ['glp', 38],
           ['SP', 19],
-          ['BGB', 4]
+          ['GB', 4]
         ]
       }, {
         id: 'wessels2',
         name: '2. Umfrage',
         data: [
           ['SP', 89],
-          ['BGB', 81],
+          ['GB', 81],
           ['glp', 22],
           ['CVP', 14],
           ['LDP', 12],
@@ -422,13 +422,13 @@ $(function () {
           ['CVP', 72],
           ['glp', 5],
           ['SP', 4],
-          ['BGB', 1]
+          ['GB', 1]
         ]
       }, {
         id: 'ackermann2',
         name: '2. Umfrage',
         data: [
-          ['BGB', 91],
+          ['GB', 91],
           ['SP', 86],
           ['glp', 32],
           ['CVP', 5],
@@ -440,7 +440,7 @@ $(function () {
         id: 'mueck2',
         name: '2. Umfrage',
         data: [
-          ['BGB', 84],
+          ['GB', 84],
           ['SP', 66],
           ['glp', 12],
           ['LDP', 4],
@@ -457,7 +457,7 @@ $(function () {
           ['LDP', 14],
           ['FDP', 13],
           ['CVP', 12],
-          ['BGB', 11],
+          ['GB', 11],
           ['SVP', 4]
         ]
       }]
